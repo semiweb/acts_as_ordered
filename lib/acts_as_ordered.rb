@@ -17,7 +17,7 @@ module ActsAsOrdered
       end
     end
 
-    scope :ordered, lambda{|column=nil, sort=nil|
+    scope :ordered, lambda{|column=nil, direction=nil|
       column ||= @acts_as_ordered[:column]
       direction ||= @acts_as_ordered[:direction]
 

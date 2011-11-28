@@ -39,6 +39,8 @@ Then use the injected scope
 
 ## Development
 
+Missing tests
+
 Questions or problems? Please post them on the [issue tracker](https://github.com/semiweb/acts_as_ordered/issues). You can contribute changes by forking the project and submitting a pull request.
 
 This gem is created by Semiweb and is under the MIT License.

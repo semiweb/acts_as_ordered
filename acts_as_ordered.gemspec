@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Semiweb"]
   s.email       = []
-  s.homepage    = ""
+  s.homepage    = "https://github.com/semiweb/acts_as_ordered"
   s.summary     = %q{Add ordered dynamic scope to models}
   s.description = %q{}
 

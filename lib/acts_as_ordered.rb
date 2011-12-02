@@ -1,20 +1,16 @@
 module ActsAsOrdered
-  def acts_as_ordered(column=nil, direction=nil)
+  def acts_as_ordered(column = 'position', direction = 'asc')
 
     @acts_as_ordered = {}
-
-    if column
-      if self.column_names.include?(column.to_s)
-        @acts_as_ordered[:column] = column
-      else
-        raise 'Invalid Acts as Ordered default column'
-      end
+    
+    if self.column_names.include?(column.to_s)
+      @acts_as_ordered[:column] = column
+    else
+      raise 'Invalid Acts as Ordered default column'
     end
 
-    if direction
-      if %w(asc desc).include?(direction.to_s)
-        @acts_as_ordered[:direction] = direction
-      end
+    if %w(asc desc).include?(direction.to_s)
+      @acts_as_ordered[:direction] = direction
     end
 
     scope :ordered, lambda{|column=nil, direction=nil|

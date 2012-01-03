@@ -2,11 +2,9 @@ module ActsAsOrdered
   def acts_as_ordered(column = 'position', direction = 'asc')
 
     @acts_as_ordered = {}
-    
-    if self.column_names.include?(column.to_s)
+
+    if column
       @acts_as_ordered[:column] = column
-    else
-      raise 'Invalid Acts as Ordered default column'
     end
 
     if %w(asc desc).include?(direction.to_s)
